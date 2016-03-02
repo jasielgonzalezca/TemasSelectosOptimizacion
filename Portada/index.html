@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>OHuman</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+</head>
+
+<body class="loading">
+<div id="wrapper">
+    <div id="bg"></div>
+    <div id="overlay"></div>
+    <div id="main">
+
+        <!-- Header -->
+        <header id="header">
+            <h1>OHuman</h1>
+            <p>Optimiza tu Vida</p>
+
+        </header>
+
+        <!-- Footer -->
+        <footer id="footer">
+
+        </footer>
+
+    </div>
+</div>
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script>
+    window.onload = function () {
+        document.body.className = '';
+    }
+    window.ontouchmove = function () {
+        return false;
+    }
+    window.onorientationchange = function () {
+        document.body.scrollTop = 0;
+    }
+</script>
+<meta http-equiv="Refresh" content="5;url=Optimizacion/index.html" class="transicion">
+$(document).ready(function() {
+
+$("body").css("display", "none");
+$("body").fadeIn(2000);
+
+$("a.transicion").click(function(event){
+event.preventDefault();
+linkDestino = this.href;
+$("body").fadeOut(1000, redireccionarPag);
+});
+
+function redireccionarPag() {
+window.location = linkDestino;
+}
+
+});
+
+</body>
+</html>
